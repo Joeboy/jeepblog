@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block main-content %}
+<h2>Contact me</h2>
+{% if form.errors %}
+<p>Sorry, you didn't fill in all the required information. Please try again:</p>
+{% else %}
+<p>You can use the form below to send me messages:</p>
+{% endif %}
+<form method="post" action="" id="contact-form">
+{{ form.as_p }}
+<input type="submit" value="Send message" id="contactform-submitbutton" />
+</form>
+{% endblock %}

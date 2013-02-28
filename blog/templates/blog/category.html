@@ -1,0 +1,11 @@
+{% extends "no_left_margin.html" %}
+
+{% block main-content %}
+
+	<div class="blogroll">
+        <p class="breadcrumb">{% for crumb in category.get_entry_path %} &raquo;&nbsp;<a href="{{ crumb.get_absolute_url }}">{{ crumb }}</a>{% endfor %}</p>
+        {% include "blog/includes/category_listing.html" %}
+	</div>
+
+{% endblock %}
+

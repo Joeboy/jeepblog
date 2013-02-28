@@ -1,0 +1,11 @@
+{% extends 'no_left_margin.html' %}
+
+{% load blog_tags %}
+
+{% block main-content %}
+    <h2>Articles</h2>
+    {% for category in categories %}
+        {% blog_category_listing %}
+    {% endfor %}
+
+{% endblock %}

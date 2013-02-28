@@ -1,0 +1,30 @@
+{% load blog_tags %}
+
+<ul>
+    <li>
+        <h2><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></h2>
+        {% for category in category.category_set.all %}
+            {% if forloop.first %}<ul>{% endif %}
+                {% blog_category_listing frontpage=frontpage %}
+            {% if forloop.last %}</ul>{% endif %}
+        {% endfor %}
+
+        {% if frontpage %}
+            {% for post in category.frontpage_post_set.all %}
+                {% if forloop.first %}<ul>{% endif %}
+                <li><h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+                {{ post.body|truncatewords_html:40|safe }}
+                </li>
+                {% if forloop.last %}</ul>{% endif %}
+            {% endfor %}
+        {% else %}
+            {% for post in category.post_set.all %}
+                {% if forloop.first %}<ul>{% endif %}
+                <li><h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
+                {{ post.body|truncatewords_html:40|safe }}
+                {% if forloop.last %}</ul>{% endif %}
+                </li>
+            {% endfor %}
+        {% endif %}
+    </li>
+</ul>

@@ -1,0 +1,227 @@
+body {
+    margin:0px;
+    padding:0px;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color:#f0f5fa;
+    font-size:12px;
+    line-height:19px;
+}
+
+#header {
+    background-color:#344d6c;
+    border-width:0px 0px 1px 0px;
+    border-style:none none solid none;
+    border-color:#444;
+    background-image:url(/media/romanesco-masthead-image.jpg);
+    background-position: top left;
+    height:90px;
+    margin-bottom:1.5em;
+}
+
+#header-titlesection {
+    background-color:#800;
+    float:right;
+    margin:10px 10px 0px 0px;
+    padding:7px 6px 3px 18px;
+    color:#fff;
+    border-width:1px 2px 2px 1px;
+    border-style:solid;
+    border-color:#533;
+}
+
+#header-titlesection h1 {
+    font-size: 2em;
+    text-align:right;
+    margin:0px;
+    padding:0px 0px 3px 0px;
+}
+
+#header-titlesection h1 a {
+    text-decoration:none;
+    color:#fff;
+}
+
+#header-titlesection p {
+    font-size:0.9em;
+    font-style:italic;
+    text-align:right;
+    margin:0px;
+    padding:0px;
+    line-height:1.5em;
+}
+
+ul#toplevel-navbar {
+    padding:0px;
+    margin:0px;
+    margin-left:6px;
+    margin-top:54px;
+    font-size: 12px;
+    border:1px solid #533;
+    border-width: 1px 2px 2px 1px;
+    float:left;
+    background-color:#533;
+}
+
+ul#toplevel-navbar li {
+    background-color:#ccc;
+    display:inline;
+    margin:0px;
+    padding:0px;
+    font-size: 12px;
+    list-style-type:none;
+}
+
+ul#toplevel-navbar li a {
+    background-color:#800;
+    float:left;
+    display:block;
+    padding-left:4px;
+    padding-right:4px;
+    padding-top:1px;
+    padding-bottom:0px;
+    margin-right:1px;
+    font-weight:bold;
+    text-decoration:none;
+    color:#fff;
+}
+
+ul#toplevel-navbar li a.last {
+    margin-right:0px;
+}
+
+#main-content-full-width {
+    margin-left: 35px;
+    width:73%;
+    float:left;
+}
+
+#main-content {
+    width:67%;
+    float:left;
+}
+
+#rightcol {
+    float:right;
+    width:200px;
+    margin-right:5px;
+}
+
+.smallprint {
+    color:#999;
+    font-size:11px;
+}
+
+.indented {
+    margin-left:115px;
+}
+
+.in-leftmargin {
+    clear:left;
+    width:95px;
+    float:left;
+    text-align:right;
+    color:#999;
+    font-size:11px;
+    margin-top:2px;
+}
+
+.blog-post {
+    margin-bottom:50px;
+}
+
+.blog-post h2 a {
+    color:#000;
+}
+
+#footer {
+    padding:6px;
+    background-color:#567317;
+    color:#fff;
+    clear:both;
+}
+
+#footer a {
+    text-decoration:none;
+    color:#fff;
+}
+
+a img {
+    border:0;
+}
+
+p.readmorelink {
+    text-decoration:none;
+    text-align:right;
+}
+
+p.readmorelink a {
+    text-decoration:none;
+    text-align:right;
+}
+
+.comment {
+    border: 1px solid #ddd;
+    padding:0px 3px 3px 3px;
+    margin-bottom:2px;
+}
+
+.colour1 {
+    background-color: #e8edff;
+}
+
+.colour2 {
+    background-color: #e4f8f8;
+}
+
+.vspace-block {
+    height:35px;
+}
+
+p {
+    margin-top:0.5em;
+    line-height:1.8em;
+}
+
+h4 {
+    margin-bottom:0.1em;
+    margin-top:1.5em;
+}
+
+#contact-form input, #contact-form textarea, .commentsreply input, .commentsreply textarea {
+    margin-left:0.5em;
+    border: 1px solid #a88;
+}
+
+input#contactform-submitbutton, .commentsreply input.submit {
+    margin:1em 0em 0em 8.5em;
+    margin-left:8.5em;
+}
+
+#recaptcha_widget_div {
+    margin-left: 8em;
+}
+
+#contact-form label, .commentsreply label {
+    font-weight:bold;
+    display:block;
+    float:left;
+    width:8em;
+    text-align:right;
+}
+
+blockquote {
+    background-color:#dfeed3;
+    margin-left:1.5em;
+    padding-left:0.5em;
+}
+
+code {
+    background-color:#dfeed3;
+    margin-left:1em;
+    padding-left:0.5em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    display:block;
+    border-width: 1px 0px 1px 0px;
+    border-style: solid none solid none;
+    border-color: #cce5cc;
+}

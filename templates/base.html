@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>{% block title %}DrJeep's sexy internet boudoir{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}/css/default.css" />
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="/rss/all/" />
+
+{% block extrahead %}{% endblock %}
+
+</head>
+{% load resources_tags %}
+<body>
+<div id="header">
+    <div id="header-titlesection">
+	<h1><a href="/">DrJeep's sexy internet boudoir</a></h1>
+<p>You know you want it</p>
+    </div>
+	<ul id="toplevel-navbar">
+		<li><a href="/">Home</a></li>
+		<li><a href="{% url "blog:index" %}">Articles</a></li>
+		<li><a href="{% url "about" %}">About</a></li>
+		<li><a class="last" href="{% url "contact:index" %}">Contact me</a></li>
+	</ul>
+<div style="clear:both"></div>
+</div>
+
+    {% block content-outer %}
+        <div id="main-content-full-width">
+{% block main-content %}{{content}}{% endblock %}
+        <div class="vspace-block"></div>
+        </div>
+
+    {% endblock %}
+
+
+    <div id="footer">
+  <p>&copy;2006-2013 Wayne Stallwood.</p>
+        <div style="clear:both"></div>
+    </div>
+
+</body>
+</html>

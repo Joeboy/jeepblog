@@ -1,0 +1,36 @@
+{% extends "no_left_margin.html" %}
+{% block title %}{{post.title}}{% endblock %}
+{% block extrahead %}
+	<script type="text/javascript" src="/media/comments/comments.js"></script>
+{% endblock %}
+{% load comments_tags %}
+
+{% block main-content %}
+<div class="blogroll">
+        <p class="breadcrumb">{% for crumb in post.get_entry_path %} &raquo;&nbsp;<a href="{{ crumb.get_absolute_url }}">{{ crumb }}</a>{% endfor %}</p>
+        <div class="blog-post">
+            <p class="in-leftmargin">{{post.date|date:"M" }} {{post.date|date:"jS"}} {{post.date|date:"Y"}}</p>
+            <p class="in-leftmargin"><a href="{{post.get_absolute_url}}#comments">{% get_comment_count post %} comments</a></p>
+            <h2 class="indented"><a href="{{ post.get_absolute_url }}">{{post.title}}</a></h2>
+            <div class="indented">{{post.body|safe}}</div>
+        </div>
+</div>
+
+    <p class="blogpost-leftmargin"><a name="comments"><span id="comment-count">{% get_comment_count post %}</span> comments</a></p>
+{% get_comments post %}
+    <div class="blogpost-indented" id="comments-list">
+{% for comment in comments %}
+    <div class="comment {% cycle colour1,colour2 %}">
+        <p><strong>{{comment.get_username}}</strong> said:</p>
+        <p>{{comment.text|linebreaksbr}}</p>
+    </div>
+{% endfor %}
+</div>
+
+{% comment_form post %}
+
+<div class="vspace-block"></div>
+
+{% endblock %}
+
+{% block rightcol %}{% endblock %}

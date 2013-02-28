@@ -1,0 +1,8 @@
+{% load blog_tags %}
+{% load comments_tags %}
+        <div class="blog-post">
+            <p class="in-leftmargin">{{post.date|date:"M" }} {{post.date|date:"jS"}} {{post.date|date:"Y"}}</p>
+            <p class="in-leftmargin"><a href="{{ post.get_absolute_url }}#comments">{% get_comment_count post %} comments</a></p>
+            <h2 class="indented"><a href="{{ post.get_absolute_url }}">{{post.title}}</a></h2>
+            <div class="post indented">{{ post.body|introparafy:post.get_absolute_url|safe}}</div>
+        </div>

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% load comments_tags %}
+
+{% block content-outer %}
+    <div style="margin:5px;">
+        <div id="main-content">
+{% block main-content %}{{content}}{% endblock %}
+        </div>
+
+        {% block rightcol %}{% endblock %}
+    </div>
+{% endblock %}
+
